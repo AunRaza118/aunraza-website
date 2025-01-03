@@ -28,9 +28,9 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            background: rgba(12, 144, 177, 0.541); /* Background for navbar */
+            background: rgba(0, 0, 0, 0.8); /* Background for navbar */
             padding: 15px 30px;
-            box-shadow: 0 2px 10px rgba(16, 156, 221, 0.514);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -39,19 +39,19 @@
         /* Navigation Buttons - Home, Portfolio, Contact Us */
         .navbar a {
             text-decoration: none;
-            color: #004e92; /* Button Text Color (Modify this to change text color) */
+            color: #004e92; /* Button Text Color */
             font-size: 18px;
             padding: 10px 20px;
             margin: 0 10px;
-            background: #ffffff; /* Background Color (Modify this to change background) */
+            background: #ffffff; /* Background Color */
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
         /* Change Background and Text Color on Hover */
         .navbar a:hover {
-            background: #00c6ff; /* Hover background (Modify this) */
-            color: white; /* Hover text color (Modify this) */
+            background: #00c6ff; /* Hover background */
+            color: white; /* Hover text color */
             transform: scale(1.1); /* Hover animation to increase size */
         }
 
@@ -70,14 +70,14 @@
 
         /* Left Side Image */
         .main-content img {
-            max-width: 55%; /* Increased the width of the image */
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0);
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         }
 
         /* Right Side Text */
         .text-content {
-            max-width: 40%;
+            max-width: 45%;
             text-align: left;
         }
 
@@ -105,7 +105,7 @@
             color: white;
             font-size: 18px;
             padding: 15px 25px;
-            background-color: #00c6ff; /* Background Color (Modify this to change color) */
+            background-color: #00c6ff; /* Background Color */
             border-radius: 30px;
             text-align: center;
             width: 150px;
@@ -114,7 +114,7 @@
 
         /* Change Button Background and Scale on Hover */
         .button-container a:hover {
-            background-color: #004e92; /* Hover Background Color (Modify this) */
+            background-color: #004e92; /* Hover Background Color */
             transform: scale(1.1); /* Button Hover Animation */
         }
 
@@ -122,12 +122,12 @@
         .footer {
             text-align: center;
             padding: 20px 0;
-            background: #5278b1a1; /* Dark background for footer */
+            background: #333; /* Dark background for footer */
             color: #c6e0ff; /* Light text color for footer */
         }
 
         .footer .contact-info {
-            margin-bottom: 100px;
+            margin-bottom: 15px;
         }
 
         .footer .contact-info p {
@@ -143,6 +143,48 @@
 
         .footer .contact-info a:hover {
             text-decoration: underline;
+        }
+
+        /* =========================== */
+        /* Media Queries for Responsiveness */
+        /* =========================== */
+
+        @media only screen and (max-width: 768px) {  /* For devices with width 768px or less */
+            body {
+                font-size: 14px;
+            }
+
+            .main-content {
+                flex-direction: column;  /* Stack content vertically on mobile */
+                align-items: center;  /* Center content */
+            }
+
+            .main-content img {
+                max-width: 80%;  /* Make image smaller on mobile */
+            }
+
+            .navbar a {
+                font-size: 16px;  /* Adjust button text size */
+                padding: 8px 15px;  /* Adjust padding for smaller screen */
+            }
+
+            .footer {
+                font-size: 14px;  /* Adjust footer text for better fit */
+            }
+        }
+
+        @media only screen and (min-width: 769px) {  /* For larger devices like desktop */
+            .main-content {
+                flex-direction: row;  /* Stack content horizontally on desktop */
+            }
+
+            .main-content img {
+                max-width: 45%;  /* Make image larger on desktop */
+            }
+
+            .text-content h2 {
+                font-size: 32px;  /* Large heading on desktop */
+            }
         }
 
     </style>
@@ -165,7 +207,7 @@
     <!-- Main Content Section -->
     <div class="main-content" id="home">
         <!-- Left Side Image -->
-        <img src="pic1.png" alt="Untitled Image">
+        <img src="images/untitled.png" alt="Untitled Image">
         
         <!-- Right Side Text -->
         <div class="text-content">
